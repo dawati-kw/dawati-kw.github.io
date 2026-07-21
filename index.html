@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استوديو الدعوات الرقمية الفاخرة</title>
+    <!-- استدعاء خطوط عربية فاخرة ومماثلة للصور -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #f7f4ef;
+            --card-bg: #ffffff;
+            --text-primary: #3d352e;
+            --text-secondary: #7a7067;
+            --accent-gold: #c5a059;
+            --accent-burgundy: #6b434b;
+            --border-light: #e6dfd5;
+            --whatsapp-color: #25D366;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Tajawal', serif;
+            line-height: 1.8;
+            padding-bottom: 60px;
+        }
+
+        /* الهيدر الفاخر */
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: transparent;
+        }
+
+        header h1 {
+            font-family: 'Amiri', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .divider {
+            width: 60px;
+            height: 1px;
+            background-color: var(--accent-gold);
+            margin: 25px auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Amiri', serif;
+            font-size: 1.8rem;
+            color: var(--text-primary);
+            margin: 50px 0 30px;
+            font-weight: 400;
+        }
+
+        /* شبكة معرض التصاميم */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border-light);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .card-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 130%; /* نسبة طولية تشبه أبعاد بطاقات الدعوة */
+            background-color: #eae5dd;
+            overflow: hidden;
+        }
+
+        .card-img-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-info h3 {
+            font-family: 'Amiri', serif;
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .card-info p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        /* شبكة الباقات بتصميم راقي */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .package-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 35px 25px;
+            text-align: center;
+            position: relative;
+        }
+
+        .package-card.featured {
+            border: 1px solid var(--accent-gold);
+            background: #fdfcf9;
+        }
+
+        .package-card.featured::before {
+            content: "الأكثر طلباً";
+            position: absolute;
+            top: -12px;
+            right: 50%;
+            transform: translateX(50%);
+            background: var(--accent-gold);
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 2px 16px;
+            border-radius: 20px;
+            letter-spacing: 1px;
+        }
+
+        .package-card h3 {
+            font-family: 'Amiri', serif;
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            font-family: 'Amiri', serif;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+
+        .package-features {
+            list-style: none;
+            margin-bottom: 25px;
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .package-features li {
+            margin-bottom: 10px;
+            padding-right: 20px;
+            position: relative;
+        }
+
+        .package-features li::before {
+            content: "•";
+            position: absolute;
+            right: 0;
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        /* الأزرار الراقية */
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .btn-gold {
+            background-color: var(--accent-gold);
+            color: #ffffff;
+        }
+
+        .btn-gold:hover {
+            background-color: #b38e4a;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--border-light);
+            color: var(--text-primary);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp-color);
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>استوديو الدعوات الرقمية</h1>
+        <div class="divider"></div>
+        <p>تصاميم تفاعلية فاخرة تليق بمناسباتكم السعيدة</p>
+    </header>
+
+    <div class="container">
+        
+        <h2 class="section-title">معرض التصاميم العصرية</h2>
+
+        <!-- معرض البطاقات المقتبسة من صورك -->
+        <div class="gallery-grid">
+
+            <!-- بطاقة 1 -->
+            <div class="card-item">
+                <div class="card-img-wrapper">
+                    <img src="1000405753.jpg" alt="دعوة عقد قران عنابية">
+                </div>
+                <div class="card-info">
+                    <h3>تصميم العنابي الفاخر</h3>
+                    <p>عقد قران - طابع هادئ مع تفاصيل ورد بارزة</p>
+                    <a href="https://wa.me/96500000000?text=استفسار%20عن%20تصميم%20العنابي%20الفاخر" class="btn btn-outline" target="_blank">معاينة النمط التفاعلي</a>
+                </div>
+            </div>
+
+            <!-- بطاقة 2 -->
+            <div class="card-item">
+                <div class="card-img-wrapper">
+                    <img src="1000405752.jpg" alt="دعوة زفاف كلاسيكية">
+                </div>
+                <div class="card-info">
+                    <h3>التصميم الملكي الكلاسيكي</h3>
+                    <p>حفل زفاف - زخارف تقليدية فاخرة مع ختم الدعوة</p>
+                    <a href="https://wa.me/96500000000?text=استفسار%20عن%20التصميم%20الملكي%20الكلاسيكي" class="btn btn-outline" target="_blank">معاينة النمط التفاعلي</a>
+                </div>
+            </div>
+
+            <!-- بطاقة 3 -->
+            <div class="card-item">
+                <div class="card-img-wrapper">
+                    <img src="1000405750.jpg" alt="دعوة زهرية ناعمة">
+                </div>
+                <div class="card-info">
+                    <h3>نمط الألوان المائية الناعمة</h3>
+                    <p>استقبال وعقد قران - رسومات ورد مائية أنيقة</p>
+                    <a href="https://wa.me/96500000000?text=استفسار%20عن%20نمط%20الألوان%20المائية" class="btn btn-outline" target="_blank">معاينة النمط التفاعلي</a>
+                </div>
+            </div>
+
+            <!-- بطاقة 4 -->
+            <div class="card-item">
+                <div class="card-img-wrapper">
+                    <img src="1000405749.jpg" alt="دعوة استقبال مولود">
+                </div>
+                <div class="card-info">
+                    <h3>تصميم المولود الجديد</h3>
+                    <p>استقبال مواليد - رسومات ناعمة وطابع دافئ</p>
+                    <a href="https://wa.me/96500000000?text=استفسار%20عن%20تصميم%20المولود" class="btn btn-outline" target="_blank">معاينة النمط التفاعلي</a>
+                </div>
+            </div>
+
+            <!-- بطاقة 5 -->
+            <div class="card-item">
+                <div class="card-img-wrapper">
+                    <img src="1000405748.jpg" alt="دعوة تخرج رسمية">
+                </div>
+                <div class="card-info">
+                    <h3>تصميم حفل التخرج</h3>
+                    <p>تخرج - طابع عصري وبسيط مع تفاصيل الاسم</p>
+                    <a href="https://wa.me/96500000000?text=استفسار%20عن%20تصميم%20التخرج" class="btn btn-outline" target="_blank">معاينة النمط التفاعلي</a>
+                </div>
+            </div>
+
+            <!-- بطاقة 6 -->
+            <div class="card-item">
+                <div class="card-img-wrapper">
+                    <img src="1000405747.jpg" alt="دعوة زفاف بيج وزيتي">
+                </div>
+                <div class="card-info">
+                    <h3>النمط الطبيعي الزيتي</h3>
+                    <p>زفاف - ألوان هادئة مع إطار طبيعي راقي</p>
+                    <a href="https://wa.me/96500000000?text=استفسار%20عن%20النمط%20الزيتي" class="btn btn-outline" target="_blank">معاينة النمط التفاعلي</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- قسم الباقات -->
+        <h2 class="section-title">الباقات والخدمات</h2>
+
+        <div class="packages-grid">
+            
+            <div class="package-card">
+                <h3>الباقة الأساسية</h3>
+                <div class="price">5 د.ك</div>
+                <ul class="package-features">
+                    <li>دعوة تفاعلية حية برابط خاص</li>
+                    <li>عداد تنازلي لموعد المناسبة</li>
+                    <li>رابط خريطة Google Maps مباشر</li>
+                    <li>زر تأكيد الحضور عبر الواتساب</li>
+                </ul>
+                <a href="https://wa.me/96500000000?text=طلب%20الباقة%20الأساسية" class="btn btn-outline" target="_blank">طلب الباقة</a>
+            </div>
+
+            <div class="package-card featured">
+                <h3>الباقة المميزة</h3>
+                <div class="price">10 د.ك</div>
+                <ul class="package-features">
+                    <li>جميع مزايا الباقة الأساسية</li>
+                    <li>تصميم غلاف خاص ومتحرك</li>
+                    <li>إضافة التاريخ الهجري والميلادي</li>
+                    <li>إضافة خلفية موسيقية حسب الطلب</li>
+                </ul>
+                <a href="https://wa.me/96500000000?text=طلب%20الباقة%20المميزة" class="btn btn-gold" target="_blank">طلب الباقة</a>
+            </div>
+
+            <div class="package-card">
+                <h3>منظومة إدارة الضيوف</h3>
+                <div class="price">30 د.ك</div>
+                <ul class="package-features">
+                    <li>جميع مزايا الباقة المميزة</li>
+                    <li>لوحة تحكم خاصة لتتبع الحضور</li>
+                    <li>رمز دخول فريد لكل ضيف (QR Code)</li>
+                    <li>تذكير تلقائي بموعد الحفل</li>
+                </ul>
+                <a href="https://wa.me/96500000000?text=طلب%20منظومة%20إدارة%20الضيوف" class="btn btn-outline" target="_blank">طلب الباقة</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
